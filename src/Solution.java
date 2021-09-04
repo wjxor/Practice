@@ -1,18 +1,14 @@
-import java.util.Scanner;
+// 함수 solution은 정수 x와 자연수 n을 입력 받아, x부터 시작해 x씩 증가하는 숫자를 n개 지니는 리스트를 리턴해야 합니다. 
+// 다음 제한 조건을 보고, 조건을 만족하는 함수, solution을 완성해주세요.
+class Solution {
+	public long[] solution(int x, int n) {
+		long[] answer = new long[n];
 
-public class Solution {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
-		int m = sc.nextInt();
+		for (long i = 0; i < n; i++) {
 
-		for (int i = 1; i <= m; i++) {
-			for (int j = 1; j <= n; j++) {
-				System.out.print("*");
-			}
-
-			System.out.println();
+			answer[(int) i] = x * (i + 1);
 		}
 
+		return answer;
 	}
 }
