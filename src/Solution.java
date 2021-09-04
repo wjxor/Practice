@@ -1,14 +1,18 @@
-class Solution {
-	public long solution(int price, int money, int count) {
-		long sum = 0;
+import java.util.Scanner;
 
-		while (count != 0) {
-			sum += price * count;
-			count--;
+public class Solution {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int m = sc.nextInt();
+
+		for (int i = 1; i <= m; i++) {
+			for (int j = 1; j <= n; j++) {
+				System.out.print("*");
+			}
+
+			System.out.println();
 		}
 
-		long answer = sum - money;
-
-		return answer > 0 ? answer : 0;
 	}
 }
