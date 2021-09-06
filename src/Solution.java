@@ -1,20 +1,14 @@
-//양의 정수 x가 하샤드 수이려면 x의 자릿수의 합으로 x가 나누어져야 합니다.
+//정수를 담고 있는 배열 arr의 평균값을 return하는 함수, solution을 완성해보세요.
 class Solution {
-	public boolean solution(int x) {
+	public double solution(int[] arr) {
+		double sum = 0;
 
-		int sum = 0;
-		int TF = x;
-
-		while (TF >= 1) {
-			sum += TF % 10;
-			TF /= 10;
+		for (int i = 0; i < arr.length; i++) {
+			sum += arr[i];
 		}
 
-		if (x % sum == 0) {
-			return true;
-		} else {
-			return false;
-		}
+		double avg = sum / arr.length;
 
+		return avg;
 	}
 }
