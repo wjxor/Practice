@@ -8,11 +8,21 @@ public class Main {
 
 		Scanner sc = new Scanner(System.in);
 
-		double[] score = { 85.6, 79.5, 83.1, 80.0, 78.2, 75.0 };
-		int class_num1 = sc.nextInt() - 1;
-		int class_num2 = sc.nextInt() - 1;
+		int[] arr = new int[10];
 
-		System.out.printf("%.1f", score[class_num1] + score[class_num2]);
+		int num;
+
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = sc.nextInt();
+		}
+
+		int min = arr[0];
+
+		for (int i = 0; i < arr.length; i++) {
+			min = Math.min(arr[i], min);
+		}
+
+		System.out.println(min);
 
 	}
 
