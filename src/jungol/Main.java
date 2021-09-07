@@ -10,19 +10,26 @@ public class Main {
 
 		int[] arr = new int[10];
 
-		int num;
+		int sum = 0;
+		float avg = 0;
 
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = sc.nextInt();
+
 		}
 
-		int min = arr[0];
-
-		for (int i = 0; i < arr.length; i++) {
-			min = Math.min(arr[i], min);
+		for (int i = 1; i < arr.length; i += 2) {
+			sum += arr[i];
 		}
 
-		System.out.println(min);
+		for (int i = 0; i < arr.length; i += 2) {
+			avg += arr[i];
+		}
+
+		avg /= 5;
+
+		System.out.println("sum : " + sum);
+		System.out.printf("avg : %.1f", avg);
 
 	}
 
