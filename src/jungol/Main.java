@@ -5,23 +5,14 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		int[] arr = new int[100];
-		int num;
 
 		Scanner sc = new Scanner(System.in);
 
-		for (int i = 0; i < arr.length; i++) {
-			num = sc.nextInt();
-			if (num == 0) {
-				for (int j = i - 1; j >= 0; j--) {
-					System.out.printf("%d ", arr[j]);
-				}
-				break;
-			} else {
-				arr[i] = num;
-			}
+		double[] score = { 85.6, 79.5, 83.1, 80.0, 78.2, 75.0 };
+		int class_num1 = sc.nextInt() - 1;
+		int class_num2 = sc.nextInt() - 1;
 
-		}
+		System.out.printf("%.1f", score[class_num1] + score[class_num2]);
 
 	}
 
