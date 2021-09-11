@@ -1,4 +1,4 @@
-package jungol;
+package Jungol;
 
 import java.util.Arrays;
 import java.util.Collections;
